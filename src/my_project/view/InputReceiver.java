@@ -2,6 +2,7 @@ package my_project.view;
 
 import KAGO_framework.control.Interactable;
 import KAGO_framework.control.ViewController;
+import KAGO_framework.model.InteractiveGraphicalObject;
 import my_project.control.ProgramController;
 import java.awt.event.MouseEvent;
 
@@ -9,10 +10,9 @@ import java.awt.event.MouseEvent;
  * Realisiert ein Objekt, dass alle Eingaben empfängt und dann danach passende Methoden
  * im ProgramController aufruft
  */
-public class InputReceiver implements Interactable {
+public class InputReceiver extends InteractiveGraphicalObject {
 
     private ProgramController programController;
-    private ViewController viewController;
 
     /**
      * Objekterzeugung
@@ -21,18 +21,7 @@ public class InputReceiver implements Interactable {
      */
     public InputReceiver(ProgramController programController, ViewController viewController){
         this.programController = programController;
-        this.viewController = viewController;
         viewController.register(this);
-    }
-
-    @Override
-    public void keyPressed(int key) {
-
-    }
-
-    @Override
-    public void keyReleased(int key) {
-
     }
 
     @Override
@@ -44,23 +33,4 @@ public class InputReceiver implements Interactable {
         }
     }
 
-    @Override
-    public void mouseClicked(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseDragged(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseMoved(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
-
-    }
 }

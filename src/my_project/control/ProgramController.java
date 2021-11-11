@@ -15,7 +15,6 @@ public class ProgramController {
 
     //Attribute
 
-
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
     private Queue<QueueBall> ballQueue;
